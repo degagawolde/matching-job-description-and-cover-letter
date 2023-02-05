@@ -1,0 +1,12 @@
+<div class="jumbotron">
+  <h1 class="display-4"><strong>Job Description</strong></h1>
+  <p class="lead"><%= @job.description %></p>
+  <p class="lead"><strong>Skills</strong>: <%= @job.skills %>  </p>
+  <p class="lead"><strong>Diploma</strong>: <%= @job.diploma %>  </p>
+  <p class="lead"><strong>Diploma Major</strong>: <%= @job.diploma_major %>  </p>
+  <p class="lead"><strong>Experience</strong>: <%= @job.experience %>  </p>
+   <hr class="my-4">
+  <%= link_to "Edit", edit_job_path(@job), class:"btn btn-secondary" %> |
+  <%= link_to "Back", jobs_path, class:"btn btn-dark" %> | 
+  <%= link_to "Delete", @job, data: { turbo_method: :delete, turbo_confirm: "Are you sure?"}, class:"btn btn-danger" %>
+</div>
